@@ -7,14 +7,14 @@ Welcome to **FastAPI Mastery**, a carefully crafted repository where I’ve docu
 
 ## 🎯 Goals
 
-- ✅ Build and run robust FastAPI applications
-- ✅ Understand RESTful API design with FastAPI
-- ✅ Implement SQLModel ORM and database operations
-- ✅ Master authentication and authorization (JWT, OAuth2, RBAC)
-- ✅ Add production-grade middleware and background task processing
-- ✅ Enable email services and account verification
-- ✅ Perform unit and integration testing
-- ✅ Deploy FastAPI applications to the cloud
+- Build and run robust FastAPI applications
+- Understand RESTful API design with FastAPI
+- Implement SQLModel ORM and database operations
+- Master authentication and authorization (JWT, OAuth2, RBAC)
+- Add production-grade middleware and background task processing
+- Enable email services and account verification
+- Perform unit and integration testing
+- Deploy FastAPI applications to the cloud
 
 ---
 
