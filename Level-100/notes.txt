@@ -5,3 +5,7 @@ pip install fastapi
 pip install uvicorn
     |--> it is an ASGI server
     |--> used to run our application
+
+
+
+path param vs query params
