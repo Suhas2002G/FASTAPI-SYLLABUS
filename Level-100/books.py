@@ -68,5 +68,3 @@ def create_books(book:BookCreate):
 
 
 
-
-
