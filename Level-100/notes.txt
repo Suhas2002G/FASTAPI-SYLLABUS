@@ -7,5 +7,4 @@ pip install uvicorn
     |--> used to run our application
 
 
-
 path param vs query params
