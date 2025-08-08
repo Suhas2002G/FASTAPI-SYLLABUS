@@ -57,7 +57,6 @@ class BookCreate(BaseModel):
     description: str = Field(min_length=1, max_length=1000)
     rating: int = Field(gt=-1, lt=6)   # 0-5
 
-
 BOOKS = []
 
 @app.post('/create_books')
