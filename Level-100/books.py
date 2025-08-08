@@ -1,4 +1,6 @@
-from fastapi import FastAPI, Path, Query
+from fastapi import FastAPI, Path, Query, Request
+from pydantic import BaseModel, Field
+from uuid import UUID
 
 app = FastAPI()
 
@@ -46,3 +48,21 @@ def get_book(
         "id": bid,
         "name": f"start-{bid}"
     }
+
+
+class BookCreate(BaseModel):
+    id: UUID
+    title: str = Field(min_length=1)
+    author: str = Field(min_length=1, max_length=100)
+    description: str = Field(min_length=1, max_length=1000)
+    rating: int = Field(gt=-1, lt=6)   # 0-5
+
+
+BOOKS = []
+
+@app.post('/create_books')
+def create_books(book:BookCreate):
+    BOOKS.append(book)
+    print(BOOKS)
+    return BOOKS
+
