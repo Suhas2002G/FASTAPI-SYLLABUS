@@ -1,0 +1,54 @@
+FastAPI 30-Day Challenge — Industry-Oriented
+
+
+Phase 1 — Solidify Core API Development (Days 1–10)
+Goal: Build confidence in designing production-grade REST APIs.
+
+Day 1 – Project Structure for Scalable FastAPI Apps (industry-standard folder structure)
+Day 2 – Path & Query Parameters with Validations (pydantic-based request validation)
+Day 3 – Request Body Validation & Nested Models (complex JSON inputs)
+Day 4 – CRUD Operations with SQLModel/SQLAlchemy (DB integration)
+Day 5 – Pagination & Filtering for Large Data Sets
+Day 6 – Response Models & Custom Response Formats (standardizing API responses)
+Day 7 – Error Handling & Exception Middleware (custom exceptions for better UX)
+Day 8 – File Upload & Download API (handling CSV/Excel/PDF uploads)
+Day 9 – Dependency Injection in FastAPI (DB connections, config, security)
+Day 10 – Environment Variables & Config Management with Pydantic Settings
+
+
+
+Phase 2 — Authentication, Security & Middleware (Days 11–18)
+Goal: Learn the security backbone every industry-grade API needs.
+
+Day 11 – JWT Authentication (Access + Refresh Tokens)
+Day 12 – Role-Based Access Control (RBAC) in FastAPI
+Day 13 – OAuth2 with Google/GitHub Login
+Day 14 – API Rate Limiting with Redis
+Day 15 – CORS, HTTPS, and Security Headers
+Day 16 – Building Custom Middleware (logging, request tracking)
+Day 17 – Handling Background Tasks (emails, data processing)
+Day 18 – Dependency Overrides for Testing Secure APIs
+
+
+
+Phase 3 — Advanced Features & Real-Time (Days 19–24)
+Goal: Stand out with real-time, async, and microservices capabilities.
+
+Day 19 – Async Programming in FastAPI (when & why to use)
+Day 20 – WebSockets for Real-Time Chat/Notifications
+Day 21 – Event-Driven Architecture with RabbitMQ/Kafka
+Day 22 – Serving ML Models via FastAPI (scikit-learn example)
+Day 23 – File Streaming & Chunked Responses (for large files)
+Day 24 – API Versioning for Backward Compatibility
+
+
+
+Phase 4 — Testing, Deployment & Optimization (Days 25–30)
+Goal: Become job-ready by mastering deployment & API performance.
+
+Day 25 – Unit Testing FastAPI with pytest
+Day 26 – API Documentation Best Practices (Swagger + ReDoc customizations)
+Day 27 – Caching with Redis for Performance Boost
+Day 28 – CI/CD Pipeline for FastAPI with GitHub Actions
+Day 29 – Deploying FastAPI on Docker + AWS EC2
+Day 30 – Deploying FastAPI on Kubernetes (scalable microservice)
