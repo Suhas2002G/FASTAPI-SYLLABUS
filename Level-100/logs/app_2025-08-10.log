@@ -1,0 +1,63 @@
+ INFO - 2025-08-10 18:03:07 - uvicorn.error - Started server process [10488]
+ INFO - 2025-08-10 18:03:07 - uvicorn.error - Waiting for application startup.
+ INFO - 2025-08-10 18:03:07 - uvicorn.error - Application startup complete.
+ INFO - 2025-08-10 18:03:07 - uvicorn.error - Shutting down
+ INFO - 2025-08-10 18:03:08 - uvicorn.error - Waiting for application shutdown.
+ INFO - 2025-08-10 18:03:08 - uvicorn.error - Application shutdown complete.
+ INFO - 2025-08-10 18:03:08 - uvicorn.error - Finished server process [10488]
+ INFO - 2025-08-10 18:03:12 - uvicorn.error - Started server process [25636]
+ INFO - 2025-08-10 18:03:12 - uvicorn.error - Waiting for application startup.
+ INFO - 2025-08-10 18:03:12 - uvicorn.error - Application startup complete.
+ INFO - 2025-08-10 18:03:15 - uvicorn.error - Shutting down
+ INFO - 2025-08-10 18:03:15 - uvicorn.error - Waiting for application shutdown.
+ INFO - 2025-08-10 18:03:15 - uvicorn.error - Application shutdown complete.
+ INFO - 2025-08-10 18:03:15 - uvicorn.error - Finished server process [25636]
+ INFO - 2025-08-10 18:03:17 - uvicorn.error - Started server process [31060]
+ INFO - 2025-08-10 18:03:17 - uvicorn.error - Waiting for application startup.
+ INFO - 2025-08-10 18:03:17 - uvicorn.error - Application startup complete.
+ INFO - 2025-08-10 18:03:19 - uvicorn.error - Shutting down
+ INFO - 2025-08-10 18:03:19 - uvicorn.error - Waiting for application shutdown.
+ INFO - 2025-08-10 18:03:19 - uvicorn.error - Application shutdown complete.
+ INFO - 2025-08-10 18:03:19 - uvicorn.error - Finished server process [31060]
+ INFO - 2025-08-10 18:03:23 - uvicorn.error - Started server process [28944]
+ INFO - 2025-08-10 18:03:23 - uvicorn.error - Waiting for application startup.
+ INFO - 2025-08-10 18:03:23 - uvicorn.error - Application startup complete.
+ INFO - 2025-08-10 18:03:24 - uvicorn.error - Shutting down
+ INFO - 2025-08-10 18:03:24 - uvicorn.error - Waiting for application shutdown.
+ INFO - 2025-08-10 18:03:24 - uvicorn.error - Application shutdown complete.
+ INFO - 2025-08-10 18:03:24 - uvicorn.error - Finished server process [28944]
+ INFO - 2025-08-10 18:03:26 - uvicorn.error - Started server process [16824]
+ INFO - 2025-08-10 18:03:26 - uvicorn.error - Waiting for application startup.
+ INFO - 2025-08-10 18:03:26 - uvicorn.error - Application startup complete.
+ INFO - 2025-08-10 18:03:39 - uvicorn.error - Shutting down
+ INFO - 2025-08-10 18:03:39 - uvicorn.error - Waiting for application shutdown.
+ INFO - 2025-08-10 18:03:39 - uvicorn.error - Application shutdown complete.
+ INFO - 2025-08-10 18:03:39 - uvicorn.error - Finished server process [16824]
+INFO - 2025-08-10 18:03:42 - uvicorn.error - Started server process [17228]
+INFO - 2025-08-10 18:03:42 - uvicorn.error - Waiting for application startup.
+INFO - 2025-08-10 18:03:42 - uvicorn.error - Application startup complete.
+INFO - 2025-08-10 18:03:48 - uvicorn.error - Shutting down
+INFO - 2025-08-10 18:03:48 - uvicorn.error - Waiting for application shutdown.
+INFO - 2025-08-10 18:03:48 - uvicorn.error - Application shutdown complete.
+INFO - 2025-08-10 18:03:48 - uvicorn.error - Finished server process [17228]
+INFO: 2025-08-10 18:03:50 - uvicorn.error - Started server process [21208]
+INFO: 2025-08-10 18:03:50 - uvicorn.error - Waiting for application startup.
+INFO: 2025-08-10 18:03:50 - uvicorn.error - Application startup complete.
+INFO: 2025-08-10 18:04:16 - uvicorn.error - Shutting down
+INFO: 2025-08-10 18:04:16 - uvicorn.error - Waiting for application shutdown.
+INFO: 2025-08-10 18:04:16 - uvicorn.error - Application shutdown complete.
+INFO: 2025-08-10 18:04:16 - uvicorn.error - Finished server process [21208]
+INFO:    2025-08-10 18:04:18 - uvicorn.error - Started server process [2428]
+INFO:    2025-08-10 18:04:18 - uvicorn.error - Waiting for application startup.
+INFO:    2025-08-10 18:04:18 - uvicorn.error - Application startup complete.
+INFO:    2025-08-10 18:04:23 - uvicorn.error - Shutting down
+INFO:    2025-08-10 18:04:24 - uvicorn.error - Waiting for application shutdown.
+INFO:    2025-08-10 18:04:24 - uvicorn.error - Application shutdown complete.
+INFO:    2025-08-10 18:04:24 - uvicorn.error - Finished server process [2428]
+INFO:     2025-08-10 18:04:26 - uvicorn.error - Started server process [14644]
+INFO:     2025-08-10 18:04:26 - uvicorn.error - Waiting for application startup.
+INFO:     2025-08-10 18:04:26 - uvicorn.error - Application startup complete.
+INFO:     2025-08-10 18:04:39 - uvicorn.error - Shutting down
+INFO:     2025-08-10 18:04:39 - uvicorn.error - Waiting for application shutdown.
+INFO:     2025-08-10 18:04:39 - uvicorn.error - Application shutdown complete.
+INFO:     2025-08-10 18:04:39 - uvicorn.error - Finished server process [14644]
