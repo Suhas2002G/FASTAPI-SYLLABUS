@@ -4,6 +4,7 @@ from pydantic import BaseModel, Field
 from schemas import BookCreate
 from database import engine, SessionLocal 
 from sqlalchemy.orm import Session
+from sqlalchemy.exc import SQLAlchemyError
 from deps import get_db
 import models
 from uuid import UUID
@@ -43,6 +44,7 @@ def get_book_by_id(
 @app.post("/create_books")
 def create_books(book: BookCreate, db: Session = Depends(get_db)):
     book_model = models.Books()
+
     book_model.title = book.title 
     book_model.author = book.author
     book_model.description = book.description
@@ -63,30 +65,44 @@ def update_books(
 ):
     try:
         book_model = db.query(models.Books).filter(models.Books.id==book_id).first()
+            
+        if not book_model :
+            return error_response(message=f'Book with ID {book_id} not found in DB')
+
         book_model.title = book.title 
         book_model.author = book.author
         book_model.description = book.description
         book_model.rating = book.rating
 
         db.commit()
-        return {
-            'message' : 'Book updated'
-        }
+        db.refresh(book_model)  # get latest data from DB
+
+        return success_response(message='Book updated successfully', data=book_model)
     except Exception as e:
-        raise HTTPException(
-            detail='Internal server error',
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR
+        db.rollback()
+        return error_response(message=f'Internal server error', 
+                       code=status.HTTP_500_INTERNAL_SERVER_ERROR
         )
 
 
-# # DELETE - Delete book
-# @app.delete("/{book_id}")
-# def delete_books(book_id: UUID):
-#     for idx, existing_book in enumerate(BOOKS):
-#         if existing_book.id == book_id:
-#             del BOOKS[idx]
-#             return {"message": f"ID {book_id} : book deleted"}
-#     raise HTTPException(
-#         status_code=status.HTTP_404_NOT_FOUND,
-#         detail=f"ID {book_id}: book not found"
-#     )
+# DELETE - Delete book
+@app.delete("/{book_id}")
+def delete_books(book_id: int, db: Session = Depends(get_db)):
+    try:
+        book_model = db.query(models.Books).filter(models.Books.id == book_id).first()
+
+        if not book_model:
+            return error_response(message=f'Book with ID {book_id} not found in DB')
+        
+        db.delete(book_model)
+        db.commit()
+        return success_response(message='Book deleted successfully')
+    # except SQLAlchemyException as e:
+
+    except Exception as e:
+        db.rollback()
+        return error_response(message=f'Internal server error', 
+                       code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                       errors=str(e)
+        )
+

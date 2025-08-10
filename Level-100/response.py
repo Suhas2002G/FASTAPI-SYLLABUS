@@ -4,9 +4,9 @@ from fastapi import status
 
 
 def success_response(
-    data: Any,
     message: str = "Request processed successfully",
     code: int = status.HTTP_200_OK,
+    data: Optional[Any] = None,
 ) -> dict:
     """
     Standard success response format.
@@ -23,6 +23,7 @@ def error_response(
     message: str,
     code: int = status.HTTP_400_BAD_REQUEST,
     errors: Optional[Any] = None,
+    data: Optional[Any] = None
 ) -> dict:
     """
     Standard error response format.

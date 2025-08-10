@@ -6,7 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 DATABASE_URL = "sqlite:///books.db"
 
 # 2. Create engine using db url
-engine = create_engine(DATABASE_URL, echo=True, connect_args={"check_same_thread":False})
+engine = create_engine(DATABASE_URL, connect_args={"check_same_thread":False})   # echo=True
 
 # 3. Create Session classes that manage database operations.
 SessionLocal = sessionmaker(autoflush=False, autocommit=False, bind=engine)
