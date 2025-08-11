@@ -13,6 +13,7 @@ app = FastAPI()
 model.Base.metadata.create_all(bind=engine)
 
 
+
 @app.post('/users')
 async def create_user(user: UserBase, db: db_dependency):
     db_user = model.User()
