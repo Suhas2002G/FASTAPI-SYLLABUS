@@ -3,6 +3,7 @@ from fastapi import Depends
 from database.db import SessionLocal
 from sqlalchemy.orm import Session
 
+
 def get_db():
     db = SessionLocal()
     try:
@@ -11,4 +12,4 @@ def get_db():
         db.close()
 
 
-db_dependency = Annotated(Session, Depends(get_db))
+db_dependency = Annotated[Session, Depends(get_db)]
