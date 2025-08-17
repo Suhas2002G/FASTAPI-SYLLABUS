@@ -19,4 +19,7 @@ class Post(Base):
     title = Column(String(50), nullable=False)
     content = Column(String(150), nullable=False)
     user_id = Column(Integer)
+
+    def __str__(self):
+        return f"{self.title}"
  

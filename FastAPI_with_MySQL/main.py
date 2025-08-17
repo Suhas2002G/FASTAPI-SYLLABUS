@@ -51,3 +51,18 @@ async def get_user(user_id: int, db: db_dependency):
         return success_response(message='User fetched', data=user)
     except Exception as e:
         return error_response(message='internal server error', errors=str(e))
+
+
+
+# Add Post
+@app.post('/posts')
+async def add_post(post: PostBase, db: db_dependency)->dict:
+    try:
+        db_post = models.Post(**post.model_dump())
+        print("--> ",db_post)
+        db.add(db_post)
+        db.commit()
+        db.refresh(db_post)
+        return success_response(message='Post created', code=201)
+    except Exception as e:
+         return error_response(message='failed to post', errors=str(e))
