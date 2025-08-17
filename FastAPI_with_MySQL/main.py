@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Depends
+from fastapi import FastAPI, Depends, status
 from sqlalchemy.orm import Session
 from schemas.user_schema import UserBase
 from schemas.post_schema import PostBase
@@ -40,3 +40,14 @@ async def create_user(user: UserBase, db: db_dependency):
         )
 
 
+@app.get('/user/{user_id}')
+async def get_user(user_id: int, db: db_dependency):
+    try:
+        user = db.query(models.User).filter(models.User.id==user_id).first()
+        print(user)
+
+        if not user:
+            return error_response(message='user not found', code=status.HTTP_404_NOT_FOUND)
+        return success_response(message='User fetched', data=user)
+    except Exception as e:
+        return error_response(message='internal server error', errors=str(e))

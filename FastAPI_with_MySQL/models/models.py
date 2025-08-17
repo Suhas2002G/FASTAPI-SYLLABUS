@@ -8,6 +8,9 @@ class User(Base):
     id = Column(Integer, primary_key=True, index=True)
     username = Column(String(50), nullable=False, unique=True)
 
+    def __str__(self):
+        return f"{self.id}:{self.username}"
+
 
 class Post(Base):
     __tablename__ = "posts"
