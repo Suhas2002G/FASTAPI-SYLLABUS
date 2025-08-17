@@ -1,0 +1,11 @@
+# Build the Docker image from the Dockerfile in the current directory
+# -t fastapi-docker : gives the image a name (tag) "fastapi-docker"
+# . (dot) : means use the current directory as the build context
+==)  docker build -t fastapi-docker .
+
+# Run a container from the built image
+# -d : run in detached mode (in background)
+# --name fastapi-docker-container : give the container a custom name
+# -p 80:80 : map port 80 of host (computer) to port 80 of container
+# fastapi-docker : name of the image to run
+==) docker run -d --name fastapi-docker-container -p 80:80 fastapi-docker
