@@ -1,0 +1,43 @@
+
+Deploy FastAPI App on AWS Lambda
+
+Step 1: Install Mangum
+pip install mangum
+Mangum is an adapter to run ASGI apps (FastAPI/Starlette) on AWS Lambda 
+with API Gateway, ALB, or Function URL.
+
+Step 2: Install dependencies into a folder
+pip3 install -t dependencies -r requirements.txt
+
+Step 3: Create deployment package
+mac/linux : 
+1. (cd dependencies; zip ../aws_lambda_artifact.zip -r .)
+2. zip aws_lambda_artifact.zip -u main.py
+
+windows:
+1. cd dependencies
+2. powershell -command "Compress-Archive -Path * -DestinationPath ..\aws_lambda_artifact.zip"
+3. cd ..
+4. powershell -command "Compress-Archive -Path main.py -Update -DestinationPath aws_lambda_artifact.zip"
+
+Step 4: Create Lambda Function in AWS Console
+Go to Lambda service → Create function
+    Function name: fastapicoding
+    Runtime: Python
+    Architecture: x86_64
+    Advanced settings: Enable Function URL = Yes, Auth type = None
+    Click Create Function
+
+Step 5: Test Lambda
+Open the generated Function URL → should show "Hello from Lambda"
+
+Step 6: Upload FastAPI App
+Upload .zip file → aws_lambda_artifact.zip (contains dependencies + main.py)
+Save and test again
+
+Step 7: Fix Handler
+Default AWS handler = lambda_function.lambda_handler
+Our FastAPI app uses handler in main.py
+Update handler to: main.handler
+
+Done. FastAPI app runs successfully on AWS Lambda.

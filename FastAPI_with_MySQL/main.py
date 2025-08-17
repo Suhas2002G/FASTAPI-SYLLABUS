@@ -62,7 +62,9 @@ async def add_post(post: PostBase, db: db_dependency)->dict:
         print("--> ",db_post)
         db.add(db_post)
         db.commit()
-        db.refresh(db_post)
-        return success_response(message='Post created', code=201)
+        return success_response(message='Post created', code=201, data=post)
     except Exception as e:
          return error_response(message='failed to post', errors=str(e))
+
+
+
