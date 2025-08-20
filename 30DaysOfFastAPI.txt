@@ -52,3 +52,6 @@ Day 27 – Caching with Redis for Performance Boost
 Day 28 – CI/CD Pipeline for FastAPI with GitHub Actions
 Day 29 – Deploying FastAPI on Docker + AWS EC2
 Day 30 – Deploying FastAPI on Kubernetes (scalable microservice)
+
+
+
