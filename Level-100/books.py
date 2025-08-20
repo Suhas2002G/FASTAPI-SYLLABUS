@@ -24,6 +24,7 @@ def get_all_books(db: Session = Depends(get_db)):
     return success_response(message='Book data is fetched', data=data)
 
 
+
 # Get single book by ID
 @app.get("/book/{bid}")
 def get_book_by_id(
